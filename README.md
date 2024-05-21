@@ -2,7 +2,7 @@
 <p align="justify"><strong>The programme captures live feed from the system it's running on, blurring in the process all the faces detected using openCV. It's based around Access Control through the usage of DataFrames and depending on the clearance level the current user has before logging in, the programme will behave differently and at the end record any actions taken while it was running. </strong>
 <br/>
 <h2>About</h2>
-This project was part of my thesis on the collection of personal information through the use of CCTV. The grade counted towards my diploma. A lot of thanks to my tutor <a href="https://www.linkedin.com/in/georgios-lioudakis-6b37286/" target="_blank">Giorgos Lioudakis</a> who guided me through the whole process.
+This project was part of my thesis on the collection of personal information through the use of CCTV. The grade counted towards my diploma. A lot of thanks to my tutor <a href="https://www.linkedin.com/in/georgios-lioudakis-6b37286/" target="_blank">Giorgos Lioudakis</a> who guided me through the whole process. The project has been updated since submission.
 
 <h2>Installation</h2>
 
