@@ -3,19 +3,23 @@
 import logging
 
 
-def log_data(ID, loginTime, logoutTime, timestamp, clearance):
+def log_data(user_id, login_time, logout_time, timestamp, clearance):
     
-    ID = str(ID)
-    loginTime = str(loginTime)
-    logoutTime = str(logoutTime)
+    user_id = str(user_id)
+    login_time = str(login_time)
+    logout_time = str(logout_time)
     
     # Change filename to desired path with the log file name.
     if clearance == "clearance 0":
         logging.basicConfig(filename="DataLog.log", level=logging.INFO)
-        logging.info("\nUser ID:["+ID+"] \n\t* Accessed the system at: "+loginTime+"\n\t* Logged out of the system at: "+logoutTime)
+        logging.info("\nUser ID:["+user_id+"] \n\t* Accessed the system at: "+login_time +
+                     "\n\t* Logged out of the system at: "+logout_time)
 
     else:
         logging.basicConfig(filename="DataLog.log", level=logging.INFO)
-        logging.info("\nUser ID:["+ID+"] \n\t* Accessed the system at: "+loginTime+"\n\t* Logged out of the system at: "+logoutTime+"\n\t* Lifted security measures at: {}".format('\n\t                               '.join(map(str, timestamp))))
+        logging.info("\nUser ID:["+user_id+"] \n\t* Accessed the system at: "+login_time +
+                     "\n\t* Logged out of the system at: "+logout_time +
+                     "\n\t* Lifted security measures at: {}".
+                     format('\n\t                               '.join(map(str, timestamp))))
    
     logging.shutdown()

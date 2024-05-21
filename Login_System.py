@@ -17,6 +17,7 @@ def login(user_data):
     correct_password = 0
     pw_check = 0
     error = 0
+    username = None
    
     while correct_username == 0:
         
@@ -27,7 +28,7 @@ def login(user_data):
         # Get the username through a GUI.
         username = simpledialog.askstring(title="Login system", prompt="Username:\t\t\t\t")
        
-        for ID, name, pword, clrnc in user_data.itertuples(index=False):
+        for ID, name, pword, user_clearance in user_data.itertuples(index=False):
             # Check the username and password.
             if username == name:
                 correct_username = 1
@@ -54,7 +55,7 @@ def login(user_data):
             # If password and username are correct change flags and save ID.
             if correct_username and correct_password == 1:
                 logged_in = ID
-                clearance = clrnc
+                clearance = user_clearance
             # Reset password flag.
             correct_password = 0
         
@@ -65,5 +66,5 @@ def login(user_data):
         
         messagebox.showinfo("Successful Login", "Welcome to the monitoring platform, "+username+".")
    
-    # Return the ID of the logged-in user.
+    # return the ID of the logged-in user
     return logged_in, clearance

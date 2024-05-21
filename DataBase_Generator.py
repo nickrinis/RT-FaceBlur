@@ -14,5 +14,5 @@ def generate_data():
             [14, 'J.Felix', 'Koump7#4321', 'clearance 0']]
         
     pd_user_data = pd.DataFrame(data, columns=header)
-    
+
     return pd_user_data
